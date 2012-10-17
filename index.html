@@ -1,66 +1,137 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Lua-csnappy by fperrad</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>lua-csnappy - Homepage</title>
+    <link rel="stylesheet" href="http://www.keplerproject.org/doc.css" type="text/css"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="Author" content="Fran&ccedil;ois Perrad"/>
+  <meta http-equiv="Language" content="en"/>
+  <meta http-equiv="Description" content="Homepage of lua-csnappy"/>
+  <meta http-equiv="Keywords" content="lua, Snappy, compressor, fast, decompressor"/>
+</head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Lua-csnappy</h1>
-        <p>a fast compressor/decompressor</p>
+<body>
 
-        <p class="view"><a href="https://github.com/fperrad/lua-csnappy">View the Project on GitHub <small>fperrad/lua-csnappy</small></a></p>
+<div id="container">
 
+<div id="product">
+  <div id="product_logo">
+    <a href="http://www.lua.org">
+      <img alt="Lua" src="http://www.andreas-rozek.de/Lua/Lua-Logo_128x128.png"/>
+    </a>
+  </div>
+  <div id="product_name"><big><strong>lua-csnappy</strong></big></div>
+  <div id="product_description">a fast compressor/decompressor</div>
+</div> <!-- id="product" -->
 
-        <ul>
-          <li><a href="https://github.com/fperrad/lua-csnappy/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/fperrad/lua-csnappy/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/fperrad/lua-csnappy">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
+<div id="main">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<div id="navigation">
+<h1>lua-csnappy</h1>
+  <ul>
+    <li><strong>Home</strong>
+      <ul>
+        <li><a href="index.html#overview">Overview</a></li>
+        <li><a href="index.html#references">References</a></li>
+        <li><a href="index.html#status">Status</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="index.html#installation">Installation</a></li>
+        <li><a href="index.html#test">Test</a></li>
+        <li><a href="index.html#license">License</a></li>
+      </ul>
+    </li>
+    <li><a href="snappy.html">module <code>snappy</code></a>
+      <ul>
+        <li><a href="snappy.html#reference">Reference</a></li>
+        <li><a href="snappy.html#examples">Examples</a></li>
+      </ul>
+    </li>
+    <li><a href="http://fperrad.github.com/lua-csnappy">Project</a>
+      <ul>
+        <li><a href="http://github.com/fperrad/lua-csnappy/">Git</a></li>
+      </ul>
+    </li>
+  </ul>
+</div> <!-- id="navigation" -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<div id="content">
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2><a name="overview"></a>Overview</h2>
 
-<h3>Designer Templates</h3>
+<p>lua-csnappy is a fast compressor/decompressor.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>lua-csnappy is a binding of the <code>csnappy</code> library
+which implements the Google's Snappy (de)compressor.</p>
 
-<h3>Rather Drive Stick?</h3>
+<h2><a name="references"></a>References</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>The <code>csnappy</code> library is available at
+<a href="http://github.com/zeevt/csnappy">http://github.com/zeevt/csnappy</a>.</p>
 
-<h3>Authors and Contributors</h3>
+<p>The specification and the original C++ implementation of Snappy are available at
+<a href="http://code.google.com/p/snappy/">http://code.google.com/p/snappy/</a>.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h2><a name="status"></a>Status</h2>
 
-<h3>Support or Contact</h3>
+<p>lua-csnappy is in beta stage.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/fperrad">fperrad</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+<p>It's developed for Lua 5.1 &amp; 5.2.</p>
+
+<h2><a name="download"></a>Download</h2>
+
+<p>lua-csnappy source can be downloaded from
+<a href="http://github.com/fperrad/lua-csnappy/downloads/">GitHub</a>.</p>
+
+<h2><a name="installation"></a>Installation</h2>
+
+<p>lua-csnappy is available via LuaRocks:</p>
+
+<pre class="example">
+luarocks install lua-csnappy
+</pre>
+
+<p>or manually, with:</p>
+
+<pre class="example">
+make install
+</pre>
+
+<h2><a name="test"></a>Test</h2>
+
+<p>The test suite requires the module
+<a href="http://fperrad.github.com/lua-TestMore">lua-TestMore</a>.</p>
+
+<pre class="example">
+make test
+</pre>
+
+<h2><a name="license"></a>Copyright and License</h2>
+
+<p>Copyright &copy; 2012 Fran&ccedil;ois Perrad
+<a href="http://www.ohloh.net/accounts/4780?ref=Rank">
+  <img alt="ohloh profile for Fran&ccedil;ois Perrad"
+       height="24" width="32" style="border-width:0"
+       src="http://www.ohloh.net/accounts/4780/widgets/account_rank.gif"/>
+</a>
+<a href="http://www.linkedin.com/in/fperrad">
+  <img alt="View Fran&ccedil;ois Perrad's profile on LinkedIn"
+       width="80" height="15" style="border-width:0"
+       src="http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif"/>
+</a>
+</p>
+
+<p>This library is licensed under the terms of the BSD license,
+like csnappy &amp; Snappy.</p>
+
+</div> <!-- id="content" -->
+
+</div> <!-- id="main" -->
+
+<div id="about">
+</div> <!-- id="about" -->
+
+</div> <!-- id="container" -->
+
+</body>
 </html>
