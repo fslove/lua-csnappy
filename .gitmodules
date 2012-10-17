@@ -1,0 +1,3 @@
+[submodule "csnappy"]
+	path = csnappy
+	url = git://github.com/zeevt/csnappy.git
