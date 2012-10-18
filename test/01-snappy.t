@@ -2,7 +2,7 @@
 
 require 'Test.More'
 
-plan(4 + 1025)
+plan(23)
 
 local snappy = require 'snappy'
 
@@ -22,9 +22,18 @@ error_like(function () snappy.decompress 'malformed' end,
            "snappy: malformed data",
            "malformed data")
 
-for i = 0, 1024 do
-    local input = string.rep('0', i)
-    local compressed = snappy.compress(input)
-    local decompressed = snappy.decompress(compressed)
-    is(decompressed, input, "length: " .. i)
+local input = ''
+local compressed = snappy.compress(input)
+type_ok(compressed, 'string', "empty string")
+is(#compressed, 1)
+local decompressed = snappy.decompress(compressed)
+is(decompressed, input)
+
+local len = 1
+for i = 0, 15 do
+    input = string.rep('0', len)
+    compressed = snappy.compress(input)
+    decompressed = snappy.decompress(compressed)
+    is(decompressed, input, "length: " .. len)
+    len = len * 3
 end
