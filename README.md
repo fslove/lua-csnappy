@@ -7,6 +7,8 @@ Introduction
 
 lua-csnappy is a binding of the `csnappy` library which implements the Google's Snappy (de)compressor.
 
+Snappy uses a [LZ77](http://en.wikipedia.org/wiki/LZ77_and_LZ78)-type algorithm with a fixed, byte-oriented encoding.
+
 The `csnappy` library is available at [http://github.com/zeevt/csnappy](http://github.com/zeevt/csnappy).
 
 The specification and the original C++ implementation of Snappy are available at [http://code.google.com/p/snappy/](http://code.google.com/p/snappy/).
