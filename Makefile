@@ -42,9 +42,15 @@ uninstall:
 manifest_pl := \
 use strict; \
 use warnings; \
-my @files = qw{MANIFEST}; \
-open my $$fh, q{-|}, q{git ls-files}; \
-while (<$$fh>) { \
+my @files = qw{ \
+    MANIFEST \
+    csnappy/csnappy.h \
+    csnappy/csnappy_internal.h \
+    csnappy/csnappy_internal_userspace.h \
+    csnappy/csnappy_compress.c \
+    csnappy/csnappy_decompress.c \
+}; \
+while (<>) { \
     chomp; \
     next if m{^\.}; \
     next if m{^doc/\.}; \
@@ -53,16 +59,6 @@ while (<$$fh>) { \
     next if m{^csnappy$$}; \
     push @files, $$_; \
 } \
-close $$fh; \
-print join qq{\n}, sort @files; \
-print qq{\n}; \
-@files = qw( \
-    csnappy/csnappy.h \
-    csnappy/csnappy_internal.h \
-    csnappy/csnappy_internal_userspace.h \
-    csnappy/csnappy_compress.c \
-    csnappy/csnappy_decompress.c \
-); \
 print join qq{\n}, sort @files;
 
 rockspec_pl := \
@@ -96,7 +92,7 @@ doc:
 	git read-tree --prefix=doc/ -u remotes/origin/gh-pages
 
 MANIFEST: doc
-	perl -e '$(manifest_pl)' > MANIFEST
+	git ls-files | perl -e '$(manifest_pl)' > MANIFEST
 
 $(TARBALL): MANIFEST
 	[ -d lua-csnappy-$(VERSION) ] || ln -s . lua-csnappy-$(VERSION)
