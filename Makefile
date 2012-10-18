@@ -56,14 +56,13 @@ while (<$$fh>) { \
 close $$fh; \
 print join qq{\n}, sort @files; \
 print qq{\n}; \
-@files = (); \
-chdir q{csnappy}; \
-open $$fh, q{-|}, q{git ls-files}; \
-while (<$$fh>) { \
-    chomp; \
-    push @files, q{csnappy/} . $$_; \
-} \
-close $$fh; \
+@files = qw( \
+    csnappy/csnappy.h \
+    csnappy/csnappy_internal.h \
+    csnappy/csnappy_internal_userspace.h \
+    csnappy/csnappy_compress.c \
+    csnappy/csnappy_decompress.c \
+); \
 print join qq{\n}, sort @files;
 
 rockspec_pl := \
