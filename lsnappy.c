@@ -77,7 +77,11 @@ static int lsnappy_decompress(lua_State *L)
 }
 
 
+#if LUA_VERSION_NUM == 502
+static const luaL_Reg snappy[] =
+#else
 static const luaL_reg snappy[] =
+#endif
 {
     { "compress",       lsnappy_compress        },
     { "decompress",     lsnappy_decompress      },
@@ -86,7 +90,11 @@ static const luaL_reg snappy[] =
 
 LUALIB_API int luaopen_snappy(lua_State *L)
 {
+#if LUA_VERSION_NUM == 502
+    luaL_newlib(L, snappy);
+#else
     luaL_register(L, "snappy", snappy);
+#endif
     lua_pushliteral (L, "Copyright (C) 2012 Francois Perrad");
     lua_setfield(L, -2, "_COPYRIGHT");
     lua_pushliteral (L, "lua-csnappy: a fast compressor/decompressor");
