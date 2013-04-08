@@ -2,6 +2,8 @@
 lua-csnappy
 ===========
 
+[![Build Status](https://travis-ci.org/fperrad/lua-csnappy.png)](https://travis-ci.org/fperrad/lua-csnappy)
+
 Introduction
 ------------
 
