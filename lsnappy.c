@@ -1,5 +1,5 @@
 /*
- * lua-csnappy : <http://fperrad.github.com/lua-csnappy/>
+ * lua-csnappy : <http://fperrad.github.io/lua-csnappy/>
  */
 
 #include "lua.h"
@@ -99,7 +99,7 @@ LUALIB_API int luaopen_snappy(lua_State *L)
     lua_setfield(L, -2, "_COPYRIGHT");
     lua_pushliteral (L, "lua-csnappy: a fast compressor/decompressor");
     lua_setfield(L, -2, "_DESCRIPTION");
-    lua_pushliteral (L, "0.1.0");
+    lua_pushliteral (L, "0.1.1");
     lua_setfield(L, -2, "_VERSION");
     return 1;
 }

@@ -45,6 +45,7 @@ use warnings; \
 my @files = qw{ \
     MANIFEST \
     csnappy/csnappy.h \
+    csnappy/csnappy_compat.h \
     csnappy/csnappy_internal.h \
     csnappy/csnappy_internal_userspace.h \
     csnappy/csnappy_compress.c \
