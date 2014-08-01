@@ -85,6 +85,10 @@ static const luaL_reg snappy[] =
 {
     { "compress",       lsnappy_compress        },
     { "decompress",     lsnappy_decompress      },
+    /* placeholders */
+    { "_COPYRIGHT",     NULL    },
+    { "_DESCRIPTION",   NULL    },
+    { "_VERSION",       NULL    },
     { NULL, NULL }
 };
 
