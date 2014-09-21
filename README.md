@@ -3,6 +3,8 @@ lua-csnappy
 ===========
 
 [![Build Status](https://travis-ci.org/fperrad/lua-csnappy.png)](https://travis-ci.org/fperrad/lua-csnappy)
+[![Coverage Status](https://coveralls.io/repos/fperrad/lua-csnappy/badge.png?branch=master)](https://coveralls.io/r/fperrad/lua-csnappy?branch=master)
+[![Licence](http://img.shields.io/badge/Licence-MIT-brightgreen.svg)](COPYRIGHT)
 
 Introduction
 ------------
