@@ -109,6 +109,9 @@ dist: $(TARBALL)
 rockspec: $(TARBALL)
 	perl -e '$(rockspec_pl)' rockspec.in > rockspec/lua-csnappy-$(VERSION)-$(REV).rockspec
 
+rock:
+	luarocks pack rockspec/lua-csnappy-$(VERSION)-$(REV).rockspec
+
 check: test
 
 test:

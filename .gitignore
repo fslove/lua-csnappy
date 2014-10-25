@@ -6,6 +6,7 @@
 /*.tar.gz
 /*.so
 /*.o
+/*.rock
 
 *.json
 *.out
