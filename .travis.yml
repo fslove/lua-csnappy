@@ -21,11 +21,13 @@ install:
   - sudo make install
   - cd ..
   - sudo luarocks install luacov-coveralls
+  - sudo luarocks install luacheck
   - sudo luarocks install lua-testmore
   - sudo pip install cpp-coveralls
 
 # Build and test.
 script:
+  - make luacheck
   - make LUAVER=$LUAVER GCOVFLAGS="-ftest-coverage -fprofile-arcs" LDFLAGS="-shared --coverage"
   - make LUA=lua$LUASUFFIX coveralls
 

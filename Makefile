@@ -117,6 +117,9 @@ check: test
 test:
 	prove --exec=$(LUA) ./test/*.t
 
+luacheck:
+	luacheck --std=min --config .test.luacheckrc test/*.t
+
 coveralls:
 	rm -f luacov.stats.out luacov.report.out
 	-prove --exec="$(LUA) -lluacov" ./test/*.t
