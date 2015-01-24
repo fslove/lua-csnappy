@@ -1,4 +1,4 @@
-globals = {
+read_globals = {
     -- Test.More
     'plan',
     'done_testing',
