@@ -29,6 +29,7 @@ install:
 script:
   - make luacheck
   - make LUAVER=$LUAVER GCOVFLAGS="-ftest-coverage -fprofile-arcs" LDFLAGS="-shared --coverage"
+  - make LUA=lua$LUASUFFIX test
   - make LUA=lua$LUASUFFIX coveralls
 
 branches:
