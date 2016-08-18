@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="a fast compressor/decompressor">
+        
         <meta name="author" content="François Perrad">
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>lua-csnappy</title>
+	<title>API - lua-csnappy</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,7 +25,7 @@
         
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -43,7 +43,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">lua-csnappy</a>
+            <a class="navbar-brand" href="..">lua-csnappy</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -53,14 +53,14 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">Home</a>
+                    <li >
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
-                    <li >
-                        <a href="csnappy/">API</a>
+                    <li class="active">
+                        <a href="./">API</a>
                     </li>
                 
                 
@@ -74,13 +74,13 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="csnappy/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -105,65 +105,31 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#overview">Overview</a></li>
+        <li class="main active"><a href="#reference">Reference</a></li>
+        
+            <li><a href="#compress-data">compress( data )</a></li>
+        
+            <li><a href="#decompress-data">decompress( data )</a></li>
         
     
-        <li class="main "><a href="#references">References</a></li>
-        
-    
-        <li class="main "><a href="#status">Status</a></li>
-        
-    
-        <li class="main "><a href="#download">Download</a></li>
-        
-    
-        <li class="main "><a href="#installation">Installation</a></li>
-        
-    
-        <li class="main "><a href="#test">Test</a></li>
-        
-    
-        <li class="main "><a href="#copyright-and-license">Copyright and License</a></li>
+        <li class="main "><a href="#examples">Examples</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="overview">Overview</h2>
-<p>lua-csnappy is a binding of the <strong>csnappy</strong> library
-which implements the Google's Snappy (de)compressor.</p>
-<p>Snappy uses a <a href="http://en.wikipedia.org/wiki/LZ77_and_LZ78">LZ77</a>-type
-algorithm with a fixed, byte-oriented encoding.</p>
-<h2 id="references">References</h2>
-<p>The <strong>csnappy</strong> library is available
-at <a href="http://github.com/zeevt/csnappy">http://github.com/zeevt/csnappy</a>.</p>
-<p>The specification and the original C++ implementation of Snappy are available
-at <a href="https://google.github.io/snappy/">https://google.github.io/snappy/</a>.</p>
-<h2 id="status">Status</h2>
-<p>lua-csnappy is in beta stage.</p>
-<p>It's developed for Lua 5.1, 5.2 &amp; 5.3.</p>
-<h2 id="download">Download</h2>
-<p>lua-csnappy source can be downloaded from
-<a href="http://github.com/fperrad/lua-csnappy/releases/">GitHub</a>.</p>
-<h2 id="installation">Installation</h2>
-<p>lua-csnappy is available via LuaRocks:</p>
-<pre><code>luarocks install lua-csnappy
-</code></pre>
-<p>or manually, with:</p>
-<pre><code>make install
-</code></pre>
-<h2 id="test">Test</h2>
-<p>The test suite requires the module
-<a href="http://fperrad.github.io/lua-TestMore/">lua-TestMore</a>.</p>
-<pre><code>make test
-</code></pre>
-<h2 id="copyright-and-license">Copyright and License</h2>
-<p>Copyright © 2012-2015 François Perrad
-<a href="http://www.openhub.net/accounts/4780?ref=Rank"><img alt="OpenHUB" src="http://www.openhub.net/accounts/4780/widgets/account_rank.gif" /></a>
-<a href="http://www.linkedin.com/in/fperrad"><img alt="LinkedIn" src="http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif" /></a></p>
-<p>This library is licensed under the terms of the BSD license,
-like csnappy &amp; Snappy.</p></div>
+<h2 id="reference">Reference</h2>
+<h4 id="compress-data">compress( data )</h4>
+<p>Accept a string data and returns a compressed string or throws an error.</p>
+<h4 id="decompress-data">decompress( data )</h4>
+<p>Accept a string data and returns a decompressed string or throws an error.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="lua">local snappy = require 'snappy'
+
+local compressed = snappy.compress(some_input)
+local decompressed = snappy.decompress(compressed)
+</code></pre></div>
             
         </div>
 
@@ -173,12 +139,12 @@ like csnappy &amp; Snappy.</p></div>
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
@@ -207,8 +173,3 @@ like csnappy &amp; Snappy.</p></div>
 
     </body>
 </html>
-
-<!--
-MkDocs version : 0.14.0
-Build Date UTC : 2016-08-18 17:55:01.467327
--->
