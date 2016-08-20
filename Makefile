@@ -55,8 +55,6 @@ my @files = qw{ \
 while (<>) { \
     chomp; \
     next if m{^\.}; \
-    next if m{^doc/\.}; \
-    next if m{^doc/google}; \
     next if m{^rockspec/}; \
     next if m{^csnappy$$}; \
     push @files, $$_; \
@@ -90,10 +88,7 @@ CHANGES:
 tag:
 	git tag -a -m 'tag release $(VERSION)' $(VERSION)
 
-doc:
-	git read-tree --prefix=doc/ -u remotes/origin/gh-pages
-
-MANIFEST: doc
+MANIFEST:
 	git ls-files | perl -e '$(manifest_pl)' > MANIFEST
 
 $(TARBALL): MANIFEST
@@ -101,8 +96,6 @@ $(TARBALL): MANIFEST
 	perl -ne 'print qq{lua-csnappy-$(VERSION)/$$_};' MANIFEST | \
 	    tar -zc -T - -f $(TARBALL)
 	rm lua-csnappy-$(VERSION)
-	rm -rf doc
-	git rm doc/*
 
 dist: $(TARBALL)
 
@@ -129,8 +122,10 @@ coveralls:
 README.html: README.md
 	Markdown.pl README.md > README.html
 
+gh-pages:
+	mkdocs gh-deploy --clean
+
 clean:
-	rm -rf doc
 	rm -f MANIFEST *.so *.o *.bak README.html
 
 realclean: clean
