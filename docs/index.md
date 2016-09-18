@@ -1,4 +1,8 @@
 
+# lua-csnappy
+
+---
+
 ## Overview
 
 lua-csnappy is a binding of the __csnappy__ library
@@ -30,11 +34,15 @@ lua-csnappy source can be downloaded from
 
 lua-csnappy is available via LuaRocks:
 
-    luarocks install lua-csnappy
+```sh
+luarocks install lua-csnappy
+```
 
 or manually, with:
 
-    make install
+```sh
+make install
+```
 
 ## Test
 
@@ -45,7 +53,7 @@ The test suite requires the module
 
 ## Copyright and License
 
-Copyright © 2012-2015 François Perrad
+Copyright &copy; 2012-2015 Fran&ccedil;ois Perrad
 [![OpenHUB](http://www.openhub.net/accounts/4780/widgets/account_rank.gif)](http://www.openhub.net/accounts/4780?ref=Rank)
 [![LinkedIn](http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif)](http://www.linkedin.com/in/fperrad)
 

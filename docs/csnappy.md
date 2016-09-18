@@ -1,15 +1,19 @@
 
-## Reference
+# snappy
 
-#### compress( data )
+---
+
+# Reference
+
+### compress( data )
 
 Accept a string data and returns a compressed string or throws an error.
 
-#### decompress( data )
+### decompress( data )
 
 Accept a string data and returns a decompressed string or throws an error.
 
-## Examples
+# Examples
 
 ```lua
 local snappy = require 'snappy'
