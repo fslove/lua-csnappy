@@ -105,7 +105,10 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#reference">Reference</a></li>
+        <li class="main active"><a href="#snappy">snappy</a></li>
+        
+    
+        <li class="main "><a href="#reference">Reference</a></li>
         
             <li><a href="#compress-data">compress( data )</a></li>
         
@@ -119,12 +122,14 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="reference">Reference</h2>
-<h4 id="compress-data">compress( data )</h4>
+<h1 id="snappy">snappy</h1>
+<hr />
+<h1 id="reference">Reference</h1>
+<h3 id="compress-data">compress( data )</h3>
 <p>Accept a string data and returns a compressed string or throws an error.</p>
-<h4 id="decompress-data">decompress( data )</h4>
+<h3 id="decompress-data">decompress( data )</h3>
 <p>Accept a string data and returns a decompressed string or throws an error.</p>
-<h2 id="examples">Examples</h2>
+<h1 id="examples">Examples</h1>
 <pre><code class="lua">local snappy = require 'snappy'
 
 local compressed = snappy.compress(some_input)
@@ -135,6 +140,8 @@ local decompressed = snappy.decompress(compressed)
 
         <footer class="col-md-12">
             <hr>
+            
+                <p>Copyright &copy; 2012-2015 Fran&ccedil;ois Perrad</p>
             
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>

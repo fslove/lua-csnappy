@@ -2,8 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "Overview\n\n\nlua-csnappy is a binding of the \ncsnappy\n library\nwhich implements the Google's Snappy (de)compressor.\n\n\nSnappy uses a \nLZ77\n-type\nalgorithm with a fixed, byte-oriented encoding.\n\n\nReferences\n\n\nThe \ncsnappy\n library is available\nat \nhttp://github.com/zeevt/csnappy\n.\n\n\nThe specification and the original C++ implementation of Snappy are available\nat \nhttps://google.github.io/snappy/\n.\n\n\nStatus\n\n\nlua-csnappy is in beta stage.\n\n\nIt's developed for Lua 5.1, 5.2 & 5.3.\n\n\nDownload\n\n\nlua-csnappy source can be downloaded from\n\nGitHub\n.\n\n\nInstallation\n\n\nlua-csnappy is available via LuaRocks:\n\n\nluarocks install lua-csnappy\n\n\n\nor manually, with:\n\n\nmake install\n\n\n\nTest\n\n\nThe test suite requires the module\n\nlua-TestMore\n.\n\n\nmake test\n\n\n\nCopyright and License\n\n\nCopyright \u00a9 2012-2015 Fran\u00e7ois Perrad\n\n\n\n\n\nThis library is licensed under the terms of the BSD license,\nlike csnappy & Snappy.",
+            "text": "lua-csnappy\n\n\n\n\nOverview\n\n\nlua-csnappy is a binding of the \ncsnappy\n library\nwhich implements the Google's Snappy (de)compressor.\n\n\nSnappy uses a \nLZ77\n-type\nalgorithm with a fixed, byte-oriented encoding.\n\n\nReferences\n\n\nThe \ncsnappy\n library is available\nat \nhttp://github.com/zeevt/csnappy\n.\n\n\nThe specification and the original C++ implementation of Snappy are available\nat \nhttps://google.github.io/snappy/\n.\n\n\nStatus\n\n\nlua-csnappy is in beta stage.\n\n\nIt's developed for Lua 5.1, 5.2 & 5.3.\n\n\nDownload\n\n\nlua-csnappy source can be downloaded from\n\nGitHub\n.\n\n\nInstallation\n\n\nlua-csnappy is available via LuaRocks:\n\n\nluarocks install lua-csnappy\n\n\n\n\nor manually, with:\n\n\nmake install\n\n\n\n\nTest\n\n\nThe test suite requires the module\n\nlua-TestMore\n.\n\n\nmake test\n\n\n\nCopyright and License\n\n\nCopyright \u00a9 2012-2015 Fran\u00e7ois Perrad\n\n\n\n\n\nThis library is licensed under the terms of the BSD license,\nlike csnappy & Snappy.",
             "title": "Home"
+        },
+        {
+            "location": "/#lua-csnappy",
+            "text": "",
+            "title": "lua-csnappy"
         },
         {
             "location": "/#overview",
@@ -42,8 +47,13 @@
         },
         {
             "location": "/csnappy/",
-            "text": "Reference\n\n\ncompress( data )\n\n\nAccept a string data and returns a compressed string or throws an error.\n\n\ndecompress( data )\n\n\nAccept a string data and returns a decompressed string or throws an error.\n\n\nExamples\n\n\nlocal snappy = require 'snappy'\n\nlocal compressed = snappy.compress(some_input)\nlocal decompressed = snappy.decompress(compressed)",
+            "text": "snappy\n\n\n\n\nReference\n\n\ncompress( data )\n\n\nAccept a string data and returns a compressed string or throws an error.\n\n\ndecompress( data )\n\n\nAccept a string data and returns a decompressed string or throws an error.\n\n\nExamples\n\n\nlocal snappy = require 'snappy'\n\nlocal compressed = snappy.compress(some_input)\nlocal decompressed = snappy.decompress(compressed)",
             "title": "API"
+        },
+        {
+            "location": "/csnappy/#snappy",
+            "text": "",
+            "title": "snappy"
         },
         {
             "location": "/csnappy/#reference",
