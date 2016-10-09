@@ -14,10 +14,10 @@ algorithm with a fixed, byte-oriented encoding.
 ## References
 
 The __csnappy__ library is available
-at [http://github.com/zeevt/csnappy](http://github.com/zeevt/csnappy).
+at <http://github.com/zeevt/csnappy>.
 
 The specification and the original C++ implementation of Snappy are available
-at [https://google.github.io/snappy/](https://google.github.io/snappy/).
+at <https://google.github.io/snappy/>.
 
 ## Status
 
@@ -53,7 +53,7 @@ The test suite requires the module
 
 ## Copyright and License
 
-Copyright &copy; 2012-2015 Fran&ccedil;ois Perrad
+Copyright &copy; 2012-2016 Fran&ccedil;ois Perrad
 [![OpenHUB](http://www.openhub.net/accounts/4780/widgets/account_rank.gif)](http://www.openhub.net/accounts/4780?ref=Rank)
 [![LinkedIn](http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.gif)](http://www.linkedin.com/in/fperrad)
 
