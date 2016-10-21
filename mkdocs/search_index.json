@@ -57,8 +57,18 @@
         },
         {
             "location": "/csnappy/#reference",
-            "text": "compress( data )  Accept a string data and returns a compressed string or throws an error.  decompress( data )  Accept a string data and returns a decompressed string or throws an error.",
+            "text": "",
             "title": "Reference"
+        },
+        {
+            "location": "/csnappy/#compress-data",
+            "text": "Accept a string data and returns a compressed string or throws an error.",
+            "title": "compress( data )"
+        },
+        {
+            "location": "/csnappy/#decompress-data",
+            "text": "Accept a string data and returns a decompressed string or throws an error.",
+            "title": "decompress( data )"
         },
         {
             "location": "/csnappy/#examples",
