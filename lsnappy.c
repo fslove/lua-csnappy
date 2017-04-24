@@ -77,11 +77,7 @@ static int lsnappy_decompress(lua_State *L)
 }
 
 
-#if LUA_VERSION_NUM >= 502
 static const luaL_Reg snappy[] =
-#else
-static const luaL_reg snappy[] =
-#endif
 {
     { "compress",       lsnappy_compress        },
     { "decompress",     lsnappy_decompress      },
