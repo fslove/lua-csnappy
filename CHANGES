@@ -1,5 +1,8 @@
 Revision history for lua-csnappy
 
+0.1.5
+	add Debian package infrastructure
+
 0.1.4  Sun Oct  9 09:30:00 2016
 	fix issue #1
 

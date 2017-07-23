@@ -14,3 +14,13 @@
 *.gcov
 *.gcda
 *.gcno
+
+/5.*
+/debian/.debhelper
+/debian/debhelper-build-stamp
+/debian/lua-csnappy*
+/debian/lua_versions
+/debian/files
+/debian/tmp/*
+/debian/trash
+

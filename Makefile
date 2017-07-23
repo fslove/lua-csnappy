@@ -55,6 +55,7 @@ my @files = qw{ \
 while (<>) { \
     chomp; \
     next if m{^\.}; \
+    next if m{^debian/}; \
     next if m{^rockspec/}; \
     next if m{^csnappy$$}; \
     push @files, $$_; \
@@ -105,6 +106,17 @@ rockspec: $(TARBALL)
 rock:
 	luarocks pack rockspec/lua-csnappy-$(VERSION)-$(REV).rockspec
 
+debclean:
+	echo "lua-csnappy ($(shell git describe --dirty)) unstable; urgency=medium" >  debian/changelog
+	echo ""                         >> debian/changelog
+	echo "  * UNRELEASED"           >> debian/changelog
+	echo ""                         >> debian/changelog
+	echo " -- $(shell git config --get user.name) <$(shell git config --get user.email)>  $(shell date -R)" >> debian/changelog
+	fakeroot debian/rules clean
+
+deb: debclean
+	fakeroot debian/rules binary
+
 check: test
 
 test:
@@ -130,5 +142,5 @@ clean:
 
 realclean: clean
 
-.PHONY: test rockspec CHANGES
+.PHONY: test rockspec deb debclean CHANGES
 
