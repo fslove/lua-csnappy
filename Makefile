@@ -117,7 +117,7 @@ coveralls:
 	rm -f luacov.stats.out luacov.report.out
 	-prove --exec="$(LUA) -lluacov" ./test/*.t
 	coveralls -b . -r . -e luarocks -e csnappy --dump c.report.json
-	luacov-coveralls -j c.report.json -v -e ^/usr -e %.t$
+	luacov-coveralls -j c.report.json -v -e /HERE/ -e %.t$
 
 README.html: README.md
 	Markdown.pl README.md > README.html
