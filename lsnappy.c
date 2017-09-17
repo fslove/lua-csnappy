@@ -44,6 +44,7 @@ static int lsnappy_decompress(lua_State *L)
     if (header_len != CSNAPPY_E_HEADER_BAD) {
         if (dest_len == 0) {
             lua_pushlstring(L, "", 0);
+            return 1;
         }
         else {
             void* ud;
@@ -51,27 +52,24 @@ static int lsnappy_decompress(lua_State *L)
             char* dest = alloc(ud, NULL, 0, dest_len);
             if (dest != NULL) {
                 int ret = csnappy_decompress_noheader(src + header_len, src_len - header_len, dest, &dest_len);
-                if (ret == CSNAPPY_E_OK) {
-                    lua_pushlstring(L, dest, dest_len);
-                    /* freeing */
-                    (void)alloc(ud, dest, dest_len, 0);
-                }
-                else {
-                    switch (ret) {
-                      case CSNAPPY_E_DATA_MALFORMED:
+                switch (ret) {
+                    case CSNAPPY_E_OK:
+                        lua_pushlstring(L, dest, dest_len);
+                        /* freeing */
+                        (void)alloc(ud, dest, dest_len, 0);
+                        return 1;
+                    case CSNAPPY_E_DATA_MALFORMED:
                         return luaL_error(L, "snappy: malformed data");
-                      case CSNAPPY_E_OUTPUT_OVERRUN:
+                    case CSNAPPY_E_OUTPUT_OVERRUN:
                         return luaL_error(L, "snappy: output overrun");
-                      default:
+                    default:
                         return luaL_error(L, "snappy: error (%d)", ret);
-                    }
                 }
             }
             else {
                 return luaL_error(L, "snappy: not enough memory");
             }
         }
-        return 1;
     }
     return luaL_error(L, "snappy: bad header");
 }
